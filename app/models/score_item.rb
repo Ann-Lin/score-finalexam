@@ -1,0 +1,2 @@
+class ScoreItem < ApplicationRecord
+end
