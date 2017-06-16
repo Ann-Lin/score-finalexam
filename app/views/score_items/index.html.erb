@@ -5,7 +5,7 @@
 <h3>
   分數級別說明：90分以上 S / 80 ~ 89 : A / 70 ~ 79 : B 級 / 60 ~ 69 : C 級 / 未滿 60 : D 級
 </h3>
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>姓名</th>
@@ -21,14 +21,17 @@
         <td><%= score_item.name %></td>
         <td><%= score_item.number %></td>
         <td><%= score_item.score %></td>
-        
-        <td><%= link_to 'Edit', edit_score_item_path(score_item) %></td>
-        <td><%= link_to 'Destroy', score_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <div class="btn-group" role="group">
+        <%= link_to 'Edit', edit_score_item_path(score_item),class: "btn btn-success" %>
+        <%= link_to 'Destroy', score_item, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger"%>
+          </div>
+         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+
 
 

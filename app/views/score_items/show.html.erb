@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title</strong>
+  <strong>Title:</strong>
   <%= @score_item.title %>
 </p>
 
@@ -24,6 +24,9 @@
   <strong>Process:</strong>
   <%= @score_item.process %>
 </p>
-
-<%= link_to 'Edit', edit_score_item_path(@score_item) %> |
+</hr>
+<div class="btn-group" role="group">
+<%= link_to 'Edit', edit_score_item_path(@score_item) ,class: 'btn btn-success'%> |
 <%= link_to 'Back', score_items_path %>
+</div>
+
